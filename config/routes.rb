@@ -9,9 +9,10 @@ Rails.application.routes.draw do
     resources :stats, only: [:index]
   end
 
-  scope '/admin', module: 'admin' do
-    resources :stats, only: [:index]
+  # scope '/admin', module: 'admin' do
   end
+  #   resources :stats, only: [:index]
+  # end
 
   # get '/admin/stats', to: 'stats#index'             Replaced by 'scope' block above
   # get '/admin/authors/new', to: 'authors#new'
