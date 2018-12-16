@@ -5,13 +5,12 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i[index show new create edit update]
 
-  namespace :admin do
+  namespace :admin do 
     resources :stats, only: [:index]
   end
 
-  # scope '/admin', module: 'admin' do
-  end
-  #   resources :stats, only: [:index]
+  # scope '/admin', module: 'admin' do               'Namespace' assumes that path prefix and module name match
+  #   resources :stats, only: [:index]                Changes name of URL helpers
   # end
 
   # get '/admin/stats', to: 'stats#index'             Replaced by 'scope' block above
